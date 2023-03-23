@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "sass-dev-task",
+    title: "Sass Dev | FrontendTask",
     htmlAttrs: {
       lang: "en",
     },

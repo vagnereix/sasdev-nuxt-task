@@ -70,7 +70,7 @@ export default {
         const { data } = await this.$axios.post("/house_rules", {
           house_rules: {
             name: this.houseRules.name,
-            active: this.active ? 1 : 0,
+            active: this.houseRules.active ? 1 : 0,
           },
         });
 
