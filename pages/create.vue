@@ -1,7 +1,7 @@
 <template>
   <div class="h-[calc(100vh-80px)] grid place-items-center">
     <main
-      class="flex-col gap-8 w-80 py-12 px-8 m-auto shadow-md shadow-slate-600 rounded bg-gray-700 flex items-start justify-center"
+      class="flex-col gap-8 w-80 py-12 px-8 m-auto shadow-md shadow-slate-600 rounded bg-gray-800 flex items-start justify-center"
     >
       <h1 class="text-gray-200 font-bold text-2xl">Create a new house rule</h1>
 
