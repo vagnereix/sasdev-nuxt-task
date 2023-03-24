@@ -8,36 +8,36 @@
 
 - `Login page and error state`
 
-<div style="margin-top: 16px; display: flex; gap: 12px;" align='center'>
-  <img style="border-radius: 6px" src="./.github/login_page.png" width='500px'/>
-  <img style="border-radius: 6px" src="./.github/login_page_error.png" width='500px'/>
+<div style="margin-top: 16px; display: flex; gap: 12px; flex-wrap: wrap;" align='left'>
+  <img style="border-radius: 6px;" src="./.github/login_page.png" width='440px'/>
+  <img style="border-radius: 6px;" src="./.github/login_page_error.png" width='440px'/>
 </div>
 
 <br />
 
 - `List and delete rules`
 
-<div style="margin-top: 16px; display: flex; gap: 12px;" align='center'>
-  <img style="border-radius: 6px" src="./.github/list_page.png" width='500px'/>
-  <img style="border-radius: 6px" src="./.github/list_page_2.png" width='500px'/>
-  <img style="border-radius: 6px" src="./.github/list_page_3.png" width='500px'/>
+<div style="margin-top: 16px; display: flex; gap: 12px; flex-wrap: wrap;" align='left'>
+  <img style="border-radius: 6px;" src="./.github/list_page.png" width='440px'/>
+  <img style="border-radius: 6px;" src="./.github/list_page_2.png" width='440px'/>
+  <img style="border-radius: 6px;" src="./.github/list_page_3.png" width='440px'/>
 </div>
 
 <br />
 
 - `Click on any rule to edit`
 
-<div style="display: flex; gap: 12px;" align='center'>
-  <img style="border-radius: 6px" src="./.github/edit_page.png" width='500px'/>
-  <img style="border-radius: 6px" src="./.github/edit_page_2.png" width='500px'/>
+<div style="display: flex; gap: 12px; flex-wrap: wrap;" align='left'>
+  <img style="border-radius: 6px;" src="./.github/edit_page.png" width='440px'/>
+  <img style="border-radius: 6px;" src="./.github/edit_page_2.png" width='440px'/>
 </div>
 
 <br />
 
 - `Create a new rule`
 
-<div style="margin-top: 16px; display: grid; place-content: start; gap: 12px;" align='center'>
-  <img style="border-radius: 6px" src="./.github/create_page.png" width='500px'/>
+<div style="margin-top: 16px; display: grid; place-content: start; gap: 12px; flex-wrap: wrap;" align='left'>
+  <img style="border-radius: 6px;" src="./.github/create_page.png" width='440px'/>
 </div>
 
 <br />
