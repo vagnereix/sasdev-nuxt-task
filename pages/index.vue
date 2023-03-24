@@ -2,7 +2,7 @@
   <main
     class="h-[calc(100vh-80px)] w-screen flex items-center justify-center gap-8 p-4"
   >
-    <div class="max-w-[1120px] w-full">
+    <div v-if="!loadingRules" class="max-w-[1120px] w-full">
       <h1
         class="text-white font-bold text-4xl text-center grandient-text-light"
       >
@@ -22,10 +22,18 @@
 
         <tbody>
           <tr v-for="rule of houseRules" class="p-4 even:bg-gray-800">
-            <td class="p-4 text-center">{{ rule.name }}</td>
-            <td class="p-4 text-center hover:opacity-80 transition">
-              {{ rule.active ? "Yes" : "No" }}
+            <td class="p-4 text-center">
+              <NuxtLink :to="{ path: '/edit', query: { id: rule.id } }">
+                {{ rule.name }}
+              </NuxtLink>
             </td>
+
+            <td class="p-4 text-center hover:opacity-80 transition">
+              <NuxtLink :to="{ path: '/edit', query: { id: rule.id } }">
+                {{ rule.active ? "Yes" : "No" }}
+              </NuxtLink>
+            </td>
+
             <td
               title="Delete this house rule"
               class="p-4 text-center hover:opacity-80 transition w-full flex items-end justify-center hover:cursor-pointer"
@@ -53,15 +61,18 @@
         </button>
       </div>
     </div>
+    <Loading v-else />
   </main>
 </template>
 
 <script>
 import DeleteIcon from "~/components/DeleteIcon.vue";
+import Loading from "~/components/Loading.vue";
 
 export default {
   components: {
     DeleteIcon,
+    Loading,
   },
   async mounted() {
     this.getHouseRules();
@@ -75,10 +86,13 @@ export default {
         totalPages: null, // comes from back end
         totalItems: null, // comes from back end
       },
+      loadingRules: true,
     };
   },
   methods: {
     async getHouseRules() {
+      this.loadingRules = true;
+
       try {
         const { data } = await this.$axios.get(
           `/house_rules?per_page=${this.paginationInfos.itemsPerPage}&page=${this.paginationInfos.actualPage}`
@@ -92,13 +106,15 @@ export default {
 
         this.houseRules = data.data.entities;
         this.paginationInfos.totalItems = data.data.pagination.total;
-        this.paginationInfos.totalPages = data.data.pagination.total_pages; // 1
+        this.paginationInfos.totalPages = data.data.pagination.total_pages;
+
+        this.loadingRules = false;
       } catch (e) {
+        this.loadingRules = false;
         this.$toast.error(e.toString());
       }
     },
     async deleteHouseRule(id) {
-      // 2
       try {
         const { data } = await this.$axios.delete(`/house_rules/${id}`);
 
