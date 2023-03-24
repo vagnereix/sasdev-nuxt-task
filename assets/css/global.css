@@ -1,3 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+html {
+  font-family: "Inter", sans-serif;
+}
+
 body {
   @apply bg-gray-900;
+}
+
+.grandient-default {
+  @apply bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500;
+}
+
+.grandient-text-error {
+  @apply bg-gradient-to-r from-red-600 to-red-400 text-transparent bg-clip-text;
+}
+
+.grandient-text-light {
+  @apply bg-gradient-to-r from-white  to-indigo-500 text-transparent bg-clip-text;
 }

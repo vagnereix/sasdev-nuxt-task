@@ -3,12 +3,14 @@
     <main
       class="flex-col gap-8 w-80 py-12 px-8 m-auto shadow-md shadow-slate-600 rounded bg-gray-800 flex items-start justify-center"
     >
-      <h1 class="text-gray-200 font-bold text-2xl">Create a new house rule</h1>
+      <h1 class="text-gray-200 font-bold text-2xl grandient-text-light">
+        Create a new house rule
+      </h1>
 
       <form class="flex flex-col gap-2 items-start justify-center w-full">
         <input
           v-model="houseRules.name"
-          class="border-none rounded text-lg px-3 py-2 w-full"
+          class="border-none rounded text-lg px-3 py-2 w-full bg-gray-500 font-semibold text-gray-300"
           type="text"
           name="house"
           id="house"
@@ -26,15 +28,14 @@
             type="checkbox"
             name="active"
             id="active"
-            placeholder="Typer your password"
           />
-          <label for="active" class="text-white">active house</label>
+          <label for="active" class="grandient-text-light">active house</label>
         </div>
 
         <button
           @click.prevent="onSubmit"
           type="submit"
-          class="mt-4 px-6 py-3 bg-gray-900 text-white font-semibold rounded tex-lg"
+          class="mt-4 px-6 py-3 bg-gray-900 text-white font-semibold rounded tex-lg hover:shadow-md hover:shadow-slate-600 transition hover:translate-y-1.5"
         >
           Create
         </button>

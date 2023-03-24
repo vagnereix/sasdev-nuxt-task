@@ -3,7 +3,7 @@
     <main
       class="flex-col gap-8 w-80 py-12 px-8 m-auto shadow-md shadow-slate-600 rounded bg-gray-800 flex items-start justify-center"
     >
-      <h1 class="text-gray-200 font-bold text-2xl">
+      <h1 class="text-gray-200 font-bold text-2xl grandient-text-light">
         Hey, wellcome back to my task app, please signin here.
       </h1>
 
