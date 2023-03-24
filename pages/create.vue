@@ -29,7 +29,9 @@
             name="active"
             id="active"
           />
-          <label for="active" class="grandient-text-light">active house</label>
+          <label for="active" class="grandient-text-light hover:cursor-pointer">
+            active house
+          </label>
         </div>
 
         <button

@@ -23,7 +23,10 @@
         <tbody>
           <tr v-for="rule of houseRules" class="p-4 even:bg-gray-800">
             <td class="p-4 text-center">
-              <NuxtLink :to="{ path: '/edit', query: { id: rule.id } }">
+              <NuxtLink
+                title="View and edit rule"
+                :to="{ path: '/edit', query: { id: rule.id } }"
+              >
                 {{ rule.name }}
               </NuxtLink>
             </td>
