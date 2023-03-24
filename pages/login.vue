@@ -10,7 +10,7 @@
       <form class="flex flex-col gap-2 items-start justify-center w-full">
         <input
           v-model="userInfo.email"
-          class="border-none rounded text-lg px-3 py-2 w-full"
+          class="border-none rounded text-lg px-3 py-2 w-full bg-gray-500 font-semibold text-gray-300"
           type="email"
           name="email"
           id="email"
@@ -18,21 +18,21 @@
         />
         <input
           v-model="userInfo.password"
-          class="border-none rounded text-lg px-3 py-2 w-full"
+          class="border-none rounded text-lg px-3 py-2 w-full bg-gray-500 font-semibold text-gray-300"
           type="password"
           name="password"
           id="password"
           placeholder="Typer your password"
         />
 
-        <span v-if="hasError" class="text-red-500 font-semibold">
+        <span v-if="hasError" class="grandient-text-error font-semibold">
           {{ errorMessage }}
         </span>
 
         <button
           @click.prevent="onSubmit"
           type="submit"
-          class="mt-4 px-6 py-3 bg-gray-900 text-white font-semibold rounded tex-lg"
+          class="mt-4 px-6 py-3 bg-gray-900 text-white font-semibold rounded tex-lg hover:shadow-md hover:shadow-slate-600 transition hover:translate-y-1.5"
         >
           {{ isLoading ? "Signing" : "Signin" }}
           <span

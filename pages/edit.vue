@@ -1,6 +1,7 @@
 <template>
   <div class="h-[calc(100vh-80px)] grid place-items-center">
     <main
+      v-if="!loadingRule"
       class="flex-col gap-8 w-80 py-12 px-8 m-auto shadow-md shadow-slate-600 rounded bg-gray-800 flex items-start justify-center"
     >
       <h1 class="text-gray-200 font-bold text-2xl grandient-text-light">
@@ -41,11 +42,17 @@
         </button>
       </form>
     </main>
+    <Loading v-else />
   </div>
 </template>
 
 <script>
+import Loading from "~/components/Loading.vue";
+
 export default {
+  components: {
+    Loading,
+  },
   created() {
     this.getHouseRulesInfo();
   },
@@ -54,6 +61,7 @@ export default {
       id: this.$route.query.id,
       houseRules: {},
       errorMessage: "",
+      loadingRule: true,
     };
   },
   computed: {
@@ -67,6 +75,7 @@ export default {
     async getHouseRulesInfo() {
       const { data } = await this.$axios.get(`/house_rules/${this.id}`);
       this.houseRules = data.data;
+      this.loadingRule = false;
     },
     async onSubmit() {
       try {
