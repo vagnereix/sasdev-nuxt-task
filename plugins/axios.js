@@ -1,4 +1,4 @@
-export default function ({ app, $axios, $toast, redirect }) {
+export default function ({ app, $axios, redirect }) {
   $axios.onRequest((config) => {
     const user = app.$cookiz.get("SASTaskUserInfoCookie");
     if (!user) return config;
@@ -11,11 +11,9 @@ export default function ({ app, $axios, $toast, redirect }) {
     });
   });
 
-  $axios.onResponse((response) => {
-    if (response.status === 409) {
-      $toast.error("Your access token has expired, pleas signin again");
-
-      redirect("/");
+  $axios.onError((error) => {
+    if (error.response.status > 400) {
+      redirect("/login");
     }
   });
 }

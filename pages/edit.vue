@@ -96,7 +96,6 @@ export default {
 
         this.$router.push("/");
       } catch (e) {
-        console.log(e.toString());
         this.errorMessage = e.toString();
       }
     },
