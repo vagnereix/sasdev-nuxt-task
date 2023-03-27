@@ -1,8 +1,8 @@
 # Vagner Reis | Nuxt.js Task for [Search and Stay](https://agency.searchandstay.com/)
 
-- <a href="#-about-the-project">About the project</a>
-- <a href="#-install-guide">Installation guide</a>
-- <a href="#-technologies">Technologies</a>
+- <a href="#about-the-project">About the project</a>
+- <a href="#install-guide">Installation guide</a>
+- <a href="#technologies">Technologies</a>
 
 ## About the project
 
